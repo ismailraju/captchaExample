@@ -18,7 +18,10 @@ public class CapchaConfig {
 
     @Bean
     public ServletRegistrationBean exampleServletBean() {
-        ServletRegistrationBean bean = new ServletRegistrationBean(new CustomServlet(), "/captcha.jpg");
+//        ServletRegistrationBean bean = new ServletRegistrationBean(new CustomServlet(), "/captcha.jpg");
+        ServletRegistrationBean bean = new ServletRegistrationBean(new CustomServlet2(), "/captcha.jpg");
+ 
+//        ServletRegistrationBean bean = new ServletRegistrationBean(new  SimpleImageCaptchaServlet(), "/captcha.jpg");
         bean.setLoadOnStartup(1);
         return bean;
     }
